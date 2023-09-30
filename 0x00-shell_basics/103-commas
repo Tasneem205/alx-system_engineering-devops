@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -m
+printf "%s\n" . .. $(ls -d -1A [0-9A-Za-z]* | sort) | awk 'BEGIN{ORS=","} {print} END{print "\n"}'

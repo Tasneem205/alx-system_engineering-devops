@@ -1,2 +1,2 @@
 #!/bin/bash
-printf "%s\n" . .. $(ls -d -1A [0-9A-Za-z]* | sort) | awk 'BEGIN{ORS=","} {print} END{print "\n"}'
+ls -1p < temp.txt && grep -v / temp.txt | awk '{printf "%s,", $0}' | sed 's/,$/\//g'; ls -1p -d .*/ < temp.txt && grep / temp.txt | awk '{printf "%s,", $0}' | sed 's/,$/\//g'

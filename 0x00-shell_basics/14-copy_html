@@ -1,2 +1,2 @@
 #!/bin/bash
-rsync -av --update --exclude='*/' --include='*.html' . ../
+if rsync -av --update --exclude='*/' --include='*.html' . ../; then ls -l ../*.html; fi

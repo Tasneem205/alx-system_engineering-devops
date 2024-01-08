@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -1p < temp.txt && grep -v / temp.txt | awk '{printf "%s,", $0}' | sed 's/,$/\//g'; ls -1p -d .*/ < temp.txt && grep / temp.txt | awk '{printf "%s,", $0}' | sed 's/,$/\//g'
+ls -map

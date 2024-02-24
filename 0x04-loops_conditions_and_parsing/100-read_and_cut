@@ -2,5 +2,5 @@
 # script to solve task 11
 
 while read -r passwd; do
-	echo "$passwd" | -d ':' -f1,3,6
+	echo "$passwd" | cut -d ':' -f1,3,6
 done < "/etc/passwd"

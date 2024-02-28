@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# a script to solve task 5
+
+netstat -l --program

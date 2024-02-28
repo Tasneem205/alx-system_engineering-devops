@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# script to solve task 3
+
+nc -l localhost 98

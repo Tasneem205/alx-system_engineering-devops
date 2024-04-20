@@ -1,7 +1,4 @@
 #!/bin/bash
 
-# Server details
-server_ip="100.25.22.236"
-
 # SSH command with private key and user
-ssh -i ~/.ssh/school ubuntu@$server_ip
+ssh -i ~/.ssh/school ubuntu@100.25.22.236

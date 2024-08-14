@@ -10,7 +10,7 @@ def number_of_subscribers(subreddit):
 
     try:
         response = requests.get(url, headers=headers, allow_redirects=False)
-        response.raise_for_status()  # Will raise an HTTPError for bad responses (4xx and 5xx)
+        response.raise_for_status()  # Will raise an HTTPError
 
         data = response.json()
         subscribers = data.get('data', {}).get('subscribers', 0)
@@ -19,6 +19,8 @@ def number_of_subscribers(subreddit):
 
     except requests.exceptions.RequestException:
         return 0
+
+
 """    url = "https://www.reddit.com/r/{}/about.json".format(subreddit)
     headers = {
         "User-Agent": "MyRedditApp/0.1 (by tasneemabdeltawab205@gmail.com)"
